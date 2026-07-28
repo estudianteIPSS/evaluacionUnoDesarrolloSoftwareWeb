@@ -61,7 +61,6 @@ Abre una terminal en la carpeta raíz del proyecto.
 Ejecuta Composer para instalar las librerías necesarias (se generará la carpeta vendor):
 
 ```
-Bash
 composer install
 ```
 
@@ -71,7 +70,6 @@ Duplica la plantilla .env.example subida en el repositorio para generar tu archi
 En PowerShell / macOS / Linux:
 
 ```
-Bash
 cp .env.example .env
 ```
 
@@ -79,14 +77,12 @@ cp .env.example .env
 Genera la clave única de encriptación requerida por el framework:
 
 ```
-Bash
 php artisan key:generate
 ```
 5. Iniciar el servidor local
 Levanta el servidor de desarrollo integrado de Laravel:
 
 ```
-Bash
 php artisan serve
 ```
 ## 🌐 Rutas de Navegación
