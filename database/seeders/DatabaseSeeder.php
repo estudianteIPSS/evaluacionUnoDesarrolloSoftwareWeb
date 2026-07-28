@@ -2,24 +2,42 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Project;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // 1. Limpiar los registros actuales
+        Project::truncate();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // 2. Insertar los 3 proyectos base
+        Project::create([
+            'nombre'       => 'Sistema de Gestión Académica',
+            'fecha_inicio' => '2026-03-15',
+            'responsable'  => 'Carlos Mendoza',
+            'monto'        => 1500000,
+            'estado'       => 'En Progreso',
+        ]);
+
+        Project::create([
+            'nombre'       => 'Rediseño Portal Web Institucional',
+            'fecha_inicio' => '2026-04-01',
+            'responsable'  => 'Ana Gómez',
+            'monto'        => 850000,
+            'estado'       => 'Planificación',
+        ]);
+
+        Project::create([
+            'nombre'       => 'Migración de Servidores a Cloud',
+            'fecha_inicio' => '2026-01-10',
+            'responsable'  => 'Eduardo Silva',
+            'monto'        => 2300000,
+            'estado'       => 'Completado',
         ]);
     }
 }
