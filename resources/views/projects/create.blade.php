@@ -1,6 +1,16 @@
 <x-templates.app-layout title="Crear Proyecto">
     <h2>Agregar Nuevo Proyecto</h2>
 
+    @if ($errors->any())
+    <div style="background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
     <form action="{{ route('projects.store') }}" method="POST" style="max-width: 400px; display: flex; flex-direction: column; gap: 12px;">
         @csrf
 
