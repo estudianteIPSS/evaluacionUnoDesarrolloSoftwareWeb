@@ -51,6 +51,7 @@ resources/views/
     └── delete.blade.php        # 5. Eliminar por ID
 
 ```
+---
 ## ⚙️ Guía de Instalación y Despliegue
 Sigue estos pasos en la terminal para desplegar y ejecutar el proyecto localmente:
 
